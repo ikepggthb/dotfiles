@@ -1,0 +1,186 @@
+format = """
+ [┌── ](bold white)\
+ $shlvl\
+ $directory\
+ $username\
+ $hostname\
+ $os\
+ $git_branch\
+ $git_commit\
+ $git_state\
+ $git_metrics\
+ $git_status\
+ $hg_branch\
+ $docker_context\
+ $package\
+ $c\
+ $cmake\
+ $cobol\
+ $daml\
+ $dart\
+ $deno\
+ $dotnet\
+ $elixir\
+ $elm\
+ $erlang\
+ $golang\
+ $guix_shell\
+ $haskell\
+ $haxe\
+ $helm\
+ $java\
+ $julia\
+ $kotlin\
+ $lua\
+ $nim\
+ $nodejs\
+ $ocaml\
+ $opa\
+ $perl\
+ $php\
+ $pulumi\
+ $purescript\
+ $python\
+ $raku\
+ $rlang\
+ $red\
+ $ruby\
+ $rust\
+ $scala\
+ $swift\
+ $terraform\
+ $vlang\
+ $vagrant\
+ $zig\
+ $buf\
+ $nix_shell\
+ $deno\
+ $cmd_duration\
+ $time
+ [└─ ](bold white)$character"""
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[rust]
+symbol = " "
+
+
+[shlvl]
+disabled = false
+format = "[ Lv.$shlvl ](white)"
+threshold = 2
+
+[directory]
+read_only = " "
+style = "bold blue"
+read_only_style = "red"
+fish_style_pwd_dir_length = 3
+format = "[  ]($style)[$read_only]($read_only_style)[$path]($style) "
+truncation_length = 4 
+truncation_symbol = ".../"
+
+[git_status]
+conflicted = " "
+untracked  = "？"
+stashed    = " "
+modified   = " "
+staged     = " "
+renamed    = " "
+deleted    = "✘ "
+style = "bold yellow"
+ahead = "▲ ${count}"
+behind = "▼ ${count}"
+diverged = "▲ ${ahead_count} ▼ ${behind_count}"
+
+[git_branch]
+format = "on [$symbol$branch](bold purple) "
+symbol = " "
+
+[cmd_duration]
+format = ",took [ $duration](white)"
+
+[time]
+disabled = true
+format = 'at [ $time](white) '
+time_format = "%T"
+utc_time_offset = "+9"
+
+[character]
+success_symbol = "[❯❯❯](bold green) "
+error_symbol =   "[❯❯❯](bold red) "
+
+[hostname]
+ssh_only = true
+format = ' | [$ssh_symbol](bold blue)[$hostname](bold red) '
+trim_at = ''
+
+[username]
+disabled = true
+
+[os]
+format = " on [$symbol]($style) [$name]($style)"
+style = "bold blue"
+disabled = true
+
+[os.symbols]
+Windows = " "
+Arch = ""
+Debian = ""
