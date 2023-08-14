@@ -10,10 +10,14 @@ class DotfileConfig:
 
     def install(self):
         for src_path, dist_path in zip(self.src, self.dist):
-            os.symlink(
-                    os.path.expanduser(src_path),
-                    os.path.expanduser(dist_path)
-                    )
+            src_path_absolute = os.path.abspath(os.path.expanduser(src_path))
+            dist_path_absolute = os.path.abspath(os.path.expanduser(dist_path))
+
+            if os.path.exists(dist_path_absolute) or os.path.islink(dist_path_absolute):
+                os.remove(dist_path_absolute)
+                print(f"remove {dist_path_absolute}")
+            os.symlink(src_path_absolute, dist_path_absolute)
+            print(f"{src_path_absolute} -> {dist_path_absolute}")
 
 
 # Neovim
@@ -71,7 +75,7 @@ class AlacrittyConfig(DotfileConfig):
             super().install()
 
 
-aracritty_setting = AlacrittyConfig()
+alacritty_setting = AlacrittyConfig()
 
 # qt6ct
 qt6ct_setting = DotfileConfig(
@@ -116,7 +120,7 @@ starship_setting = DotfileConfig(
         )
 
 
-dotfile_configs = [neovim_setting, i3wm_setting]
+dotfile_configs = [neovim_setting, i3wm_setting, kvantum_setting, mozc_setting, rofi_setting, alacritty_setting, qt6ct_setting, qt5ct_setting, picom_setting, fcitx5_setting, polybar_setting, starship_setting]
 
 
 def main():

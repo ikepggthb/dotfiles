@@ -1,9 +1,19 @@
 vim.cmd.packadd "packer.nvim"
 
 require("packer").startup(function()
+    use "Shougo/ddc.vim"
+    use "vim-denops/denops.vim"
+    use "Shougo/pum.vim"
+    use "Shougo/ddc-around"
+    use "LumaKernel/ddc-file"
+    use "Shougo/ddc-matcher_head"
+    use "Shougo/ddc-source-nvim-lsp"
+    use "Shougo/ddc-sorter_rank"
+    use "Shougo/ddc-converter_remove_overlap"
+    use "mattn/vim-lsp-settings"
+    use "prabirshrestha/vim-lsp"
     use 'tanvirtin/monokai.nvim'
     use 'nvim-treesitter/nvim-treesitter'
-    use 'neoclide/coc.nvim'
 end)
 
 

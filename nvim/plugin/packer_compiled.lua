@@ -74,40 +74,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["ddc-around"] = {
+  ["coc.nvim"] = {
     loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc-around",
-    url = "https://github.com/Shougo/ddc-around"
-  },
-  ["ddc-converter_remove_overlap"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc-converter_remove_overlap",
-    url = "https://github.com/Shougo/ddc-converter_remove_overlap"
-  },
-  ["ddc-file"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc-file",
-    url = "https://github.com/LumaKernel/ddc-file"
-  },
-  ["ddc-matcher_head"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc-matcher_head",
-    url = "https://github.com/Shougo/ddc-matcher_head"
-  },
-  ["ddc-sorter_rank"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc-sorter_rank",
-    url = "https://github.com/Shougo/ddc-sorter_rank"
-  },
-  ["ddc.vim"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/ddc.vim",
-    url = "https://github.com/Shougo/ddc.vim"
-  },
-  ["denops.vim"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/denops.vim",
-    url = "https://github.com/vim-denops/denops.vim"
+    path = "/home/azure/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
   },
   ["monokai.nvim"] = {
     loaded = true,
@@ -118,21 +88,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/azure/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["pum.vim"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/pum.vim",
-    url = "https://github.com/Shougo/pum.vim"
-  },
-  ["vim-lsp"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/vim-lsp",
-    url = "https://github.com/prabirshrestha/vim-lsp"
-  },
-  ["vim-lsp-settings"] = {
-    loaded = true,
-    path = "/home/azure/.local/share/nvim/site/pack/packer/start/vim-lsp-settings",
-    url = "https://github.com/mattn/vim-lsp-settings"
   }
 }
 

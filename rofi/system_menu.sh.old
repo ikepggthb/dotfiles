@@ -2,10 +2,10 @@
 #!/bin/bash
 
 list=(
-  "Lock Screen" "/home/azure/.config/rofi/lock.sh"
+  "Lock Screen" "i3lock"
   "Logout"      "i3-msg exit"
   "Reboot"      "systemctl reboot"
-  "Suspend"     "/home/azure/.config/rofi/lock.sh && systemctl suspend"
+  "Suspend"     "systemctl suspend"
   "Shutdown"    "systemctl poweroff"
 )
 
@@ -20,8 +20,5 @@ else
       break
     fi
   done
-  nohup bash -c "$command" >/dev/null 2>&1 &
+  eval "${command:-:}"
 fi
-
-
-  #eval "${command:-:}"

@@ -1,6 +1,20 @@
 //@theme "/home/azure/.local/share/rofi/themes/onedark.rasi"
 configuration {
-  font       : "IBM Plex Sans JP Medm 10";
+  font       : "BIZTER Regular 13";
   show-icons : true;
 }
+
 @theme "/usr/share/rofi/themes/Monokai.rasi"
+
+
+element {
+    padding: 10px;
+}
+element-icon {
+    size:             2ch ;
+}
+
+window {
+    background-color: rgba (0,0,0,80%);
+}
+
