@@ -4,6 +4,7 @@ require("packer").startup(function()
     use 'tanvirtin/monokai.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'neoclide/coc.nvim'
+    use "vim-airline/vim-airline"
 end)
 
 

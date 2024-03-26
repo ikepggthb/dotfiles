@@ -2,6 +2,8 @@ import os
 import platform
 
 
+OS_NAME = platform.system()
+
 class DotfileConfig:
     def __init__(self, src, dist, os=None):
         self.src = src
@@ -64,15 +66,14 @@ class AlacrittyConfig(DotfileConfig):
                 os=["Windows", "Linux"])
 
     def install(self):
-        os_name = platform.system()
-        if os_name == "Linux":
+        OS_NAME = platform.system()
+        if OS_NAME == "Linux":
             self.src = ["./alacritty"]
             self.dist = ["~/.config/alacritty"]
-            super().install()
-        if os_name == "Windows":
+        if OS_NAME == "Windows":
             self.src = ["./alacritty/alacritty.yml"]
             self.dist = ["%APPDATA%\\alacritty\\alacritty.yml"]
-            super().install()
+        super().install()
 
 
 alacritty_setting = AlacrittyConfig()
@@ -124,10 +125,8 @@ dotfile_configs = [neovim_setting, i3wm_setting, kvantum_setting, mozc_setting, 
 
 
 def main():
-    os_name = platform.system()
-
     for config in dotfile_configs:
-        if os_name in config.os_list:
+        if OS_NAME in config.os_list:
             config.install()
 
 

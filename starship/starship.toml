@@ -1,5 +1,5 @@
 format = """
-   [](bold white)\
+  [](bold white)\
  $shlvl\
  $directory\
  $username\
@@ -57,7 +57,7 @@ format = """
  $deno\
  $cmd_duration\
  $time
-    [](bold white)$character"""
+     [](bold white)$character"""
 
 [aws]
 symbol = "  "
@@ -133,7 +133,7 @@ read_only = "  "
 style = "bold blue"
 read_only_style = "bold red"
 fish_style_pwd_dir_length = 3
-format = "[ ]($style)[$read_only]($read_only_style)[ :]($style) [$path]($style)"
+format = "[ ]($style)[$read_only]($read_only_style)[ :]($style) [$path]($style) "
 truncation_length = 4 
 truncation_symbol = ".../"
 
@@ -159,7 +159,7 @@ format = ", [ :$duration](white)"
 
 [time]
 disabled = true
-format = 'at [ $time](white) '
+format = ' at [ $time](white) '
 time_format = "%T"
 utc_time_offset = "+9"
 
